@@ -29,7 +29,7 @@
         const shreddedImages = []
 
         const img = new Image()
-        img.src = 'dror.png'
+        img.src = 'drork_2.png'
         img.onload = () => {
             const ar = img.width / img.height
             const imgHeight = imgWidth / ar
@@ -81,7 +81,7 @@
 
         function animate() {
             frameCount++
-            const iFrame = 100
+            const iFrame = 50
             const key = Math.floor(frameCount / iFrame) % keys.length
             const nextKey = (key + 1) % keys.length
             const t = (frameCount % iFrame) / iFrame // Only between 0 and 1
