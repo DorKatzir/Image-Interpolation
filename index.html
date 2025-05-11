@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <title>Canvas</title>
 </head>
-<body>
+<body style="background-color: #0B080D;">
     <!-- <canvas 
         id="myCanvas" 
         width="280" height="389" 
@@ -24,7 +24,7 @@
         const ctx = myCanvas.getContext('2d')
         const {width, height} = myCanvas 
         const imgWidth = width / 2 
-        const shredSize = 10
+        const shredSize = 1
 
         const shreddedImages = []
 
@@ -53,12 +53,22 @@
 
             [
                 { x: left, y: up, s: 1 },
+                { x: left + shredSize, y: up, s: 1 }
+            ],
+
+            [
+                { x: left, y: up, s: 1 },
                 { x: left + shredSize, y: down, s: 1 }
             ],
 
             [
                 { x: left, y: up, s: 0 },
-                { x: left + shredSize, y: down, s: 0 }
+                { x: left, y: down, s: 0 }
+            ],
+
+            [
+                { x: left, y: up, s: 0 },
+                { x: left, y: down, s: 0 }
             ],
 
             [
